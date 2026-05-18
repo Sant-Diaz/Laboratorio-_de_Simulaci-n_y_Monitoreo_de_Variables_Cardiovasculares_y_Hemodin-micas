@@ -9,16 +9,7 @@ Facultad de Ingeniería — Ingeniería Biomédica
 
 ---
 
-### Integrantes
-- Nombre Apellido
-- Nombre Apellido
-- Nombre Apellido
 
-### Docente
-Ing. Erick Javier Argüello Prada  
-
-### Fecha
-Mayo 2026
 
 </div>
 
