@@ -1,116 +1,52 @@
-# Simulación y Monitoreo de Variables Cardiovasculares y Hemodinámicas
+<h1 align="center"> Simulación y Monitoreo de Variables Cardiovasculares y Hemodinámicas</h1>
 
-<div align="center">
+El monitoreo de signos vitales constituye una herramienta fundamental en el área clínica y biomédica, ya que permite supervisar en tiempo real el estado fisiológico de un paciente mediante parámetros como frecuencia cardíaca, saturación periférica de oxígeno, presión arterial y temperatura. Estos sistemas de monitoreo son ampliamente utilizados en hospitales, unidades de cuidado intensivo y servicios de urgencias para apoyar el diagnóstico y la toma de decisiones médicas.
 
-## Laboratorio 5 — Instrumentación Biomédica y Biosensores
+En esta práctica se realizó la evaluación funcional del monitor de signos vitales **uMEC 100** utilizando el simulador de parámetros hemodinámicos **Pronk OxSim OX-1**, el cual permite generar señales fisiológicas controladas para verificar el desempeño del equipo sin necesidad de utilizar un paciente real. Durante el desarrollo de la práctica se analizaron diferentes condiciones simuladas, como bradicardia, taquicardia, hipoxia y baja perfusión, evaluando la precisión de las mediciones, el comportamiento de las alarmas clínicas y la relación entre las señales visualizadas y los parámetros fisiológicos correspondientes.
 
-**Universidad Militar Nueva Granada**  
-Facultad de Ingeniería — Ingeniería Biomédica  
+## PARTE A - Revisión Bibliográfica
 
----
+### Monitor de Signos vitales uMEC 100 
+El monitor de signos vitales Mindray uMEC 100 es un equipo multiparámetro empleado para la supervisión clínica de variables fisiológicas como ECG, frecuencia cardíaca, SpO₂, presión arterial no invasiva, respiración y temperatura. Su función principal es apoyar el seguimiento continuo del estado del paciente mediante visualización en pantalla, alarmas clínicas y registro de parámetros, por lo que resulta fundamental en áreas como hospitalización, urgencias y cuidado crítico [1], [2].
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8f72a455-997d-4301-9054-e2edb7ad944d" width="500">
+</p>
 
+### Simulador Pronk OxSim OX-1 
+El simulador Pronk OxSim OX-1 es un equipo portátil utilizado para verificar el funcionamiento de sistemas de pulsioximetría, ya que permite simular valores de saturación de oxígeno y frecuencia de pulso sin necesidad de conectarlo a un paciente real. Según la información técnica del fabricante, el OxSim OX-1 permite probar el sistema completo de SpO₂, incluyendo sensor, cable de extensión y monitor, con valores simulados de saturación y pulso definidos para pruebas biomédicas [3], [4].
 
-</div>
-
----
-
-# Tabla de Contenido
-
-1. Introducción  
-2. Objetivos  
-3. Marco Teórico  
-4. Materiales y Equipos  
-5. Desarrollo Experimental  
-   - Parte A  
-   - Parte B  
-6. Resultados  
-7. Análisis de Resultados  
-8. Preguntas para la Discusión  
-9. Conclusiones  
-10. Bibliografía  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9cbe2d31-f131-4e55-9da3-ae1e8b0d0f79" width="500">
+</p>
 
 ---
 
-# 1. Introducción
-
-En el contexto clínico moderno, los monitores de signos vitales representan herramientas fundamentales para la vigilancia continua del estado fisiológico de un paciente. Variables como la frecuencia cardíaca (HR) y la saturación periférica de oxígeno (SpO₂) permiten evaluar rápidamente condiciones hemodinámicas y respiratorias críticas.
-
-Para garantizar la confiabilidad de estos equipos, se emplean simuladores biomédicos especializados capaces de recrear condiciones fisiológicas y patológicas controladas. En esta práctica se utilizó el simulador **Pronk OxSim OX-1** junto con el monitor de signos vitales **uMEC100**, con el objetivo de evaluar la respuesta del monitor ante diferentes condiciones simuladas de frecuencia cardíaca y saturación de oxígeno.
-
-Adicionalmente, se analizaron los sistemas de alarmas clínicas y la precisión de medición del monitor, aspectos esenciales en la seguridad del paciente y en los procesos de validación de equipos biomédicos.
-
----
-
-# 2. Objetivos
-
-## Objetivo General
-
-Operar el simulador Pronk OxSim OX-1 y el monitor de signos vitales uMEC100 para realizar pruebas funcionales de monitoreo hemodinámico.
-
-## Objetivos Específicos
-
-- Identificar los modos de operación del simulador Pronk OxSim.
-- Verificar los límites de medición del monitor uMEC100.
-- Evaluar el funcionamiento de alarmas fisiológicas.
-- Analizar el comportamiento de señales fotopletismográficas.
-- Calcular errores absolutos y porcentuales en las mediciones obtenidas.
-
----
-
-# 3. Marco Teórico
-
-## 3.1 Pulsioximetría
-
-La pulsioximetría es una técnica no invasiva utilizada para medir la saturación periférica de oxígeno (SpO₂) en la sangre. Su funcionamiento se basa en la absorción diferencial de luz roja e infrarroja por parte de la hemoglobina oxigenada y desoxigenada.
-
-## 3.2 Frecuencia Cardíaca
-
-La frecuencia cardíaca corresponde al número de latidos del corazón por minuto (bpm). Es una variable fisiológica fundamental para evaluar el estado cardiovascular del paciente.
-
-## 3.3 Fotopletismografía
-
-La señal fotopletismográfica (PPG) es una representación óptica de las variaciones de volumen sanguíneo en los tejidos periféricos. Esta señal permite calcular tanto la frecuencia cardíaca como la SpO₂.
-
-## 3.4 Alarmas Clínicas
-
-Los monitores multiparámetro incorporan alarmas visuales y auditivas que se activan cuando una variable supera límites previamente establecidos. Estas alarmas permiten actuar oportunamente ante condiciones críticas del paciente.
-
----
-
-# 4. Materiales y Equipos
-
-| Equipo | Descripción |
-|---|---|
-| Monitor de signos vitales | uMEC100 (Mindray) |
-| Simulador biomédico | Pronk OxSim OX-1 |
-| Sensor de SpO₂ | Compatible con uMEC100 |
-| Computador | Registro y documentación |
-| Libreta de laboratorio | Anotaciones experimentales |
-
----
-
-# 5. Desarrollo Experimental
-
-# Parte A — Revisión Bibliográfica
-
----
-
-## A.1 ¿Cómo colocar el uMEC100 en modo monitor?
+#### A.1 ¿Cómo colocar el uMEC100 en modo monitor?
 
 Para configurar el uMEC100 en modo monitor se realizó el siguiente procedimiento:
 
-1. Encender el monitor mediante el botón principal de alimentación.
-2. Esperar el inicio completo del sistema operativo del equipo.
-3. Acceder al menú principal.
-4. Seleccionar la opción **Modo Monitor**.
-5. Verificar la correcta conexión de sensores y módulos de medición.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/86ddd714-d779-433d-ae4a-9acd10270118"  width="500">
+</p>
 
 Este modo permite visualizar continuamente parámetros fisiológicos del paciente y activar alarmas clínicas configurables.
 
 ---
 
-## A.2 Parámetros fisiológicos simulables con el Pronk OxSim OX-1
+#### A.2 Parámetros fisiológicos simulables con el Pronk OxSim OX-1
+
+El simulador Pronk OxSim OX-1 permite generar señales fisiológicas simuladas relacionadas principalmente con la pulsioximetría y la frecuencia cardíaca, utilizadas para verificar el correcto funcionamiento de monitores de signos vitales [3].
+
+- **Saturación de oxígeno (SpO₂):** Simula diferentes porcentajes de saturación arterial de oxígeno, generalmente entre valores fisiológicos normales y estados de hipoxemia. Este parámetro representa el porcentaje de hemoglobina oxigenada presente en la sangre arterial y es medido mediante tecnología óptica basada en absorción de luz roja e infrarroja [4].
+
+- **Frecuencia de pulso o frecuencia cardíaca:** El equipo puede generar pulsaciones simuladas expresadas en pulsos por minuto (bpm), permitiendo verificar la capacidad del monitor para detectar correctamente el ritmo cardíaco del paciente [3].
+
+- **Índice de perfusión (dependiendo de la configuración):** Algunos modos de simulación permiten variar la intensidad de la señal pulsátil, simulando condiciones de perfusión baja o alta. Este parámetro representa la relación entre el flujo sanguíneo pulsátil y el flujo no pulsátil detectado por el sensor SpO₂ [5].
+
+- **Condiciones de falla o interferencia:** El simulador puede generar escenarios de señal débil, ausencia de pulso o interferencias para evaluar la respuesta del monitor y sus alarmas clínicas [3].
+
+<div align="center">
 
 | Parámetro | Descripción |
 |---|---|
@@ -120,108 +56,154 @@ Este modo permite visualizar continuamente parámetros fisiológicos del pacient
 | Amplitud pulsátil | Modificación de intensidad de señal PPG |
 | Arritmias simuladas | Alteraciones en frecuencia y periodicidad |
 
-### Explicación
+</div>
 
 El simulador OxSim genera señales ópticas equivalentes a las producidas por tejido humano vascularizado. Esto permite evaluar el desempeño del monitor sin necesidad de utilizar pacientes reales.
 
 ---
 
-## A.3 Errores Máximos Permitidos (EMP)
+#### A.3 Errores Máximos Permitidos (EMP)
 
+En equipos de monitoreo clínico, los errores máximos permitidos (EMP) se encuentran definidos por normas internacionales y especificaciones de fabricantes biomédicos [6].
+
+<div align="center">
+   
 | Parámetro | Error Máximo Permitido |
 |---|---|
 | Frecuencia cardíaca | ±3 bpm |
 | Saturación SpO₂ | ±2 % |
 | Tiempo de activación de alarmas | ≤ 10 s |
 
-Estos valores pueden variar según normativas internacionales y especificaciones del fabricante.
+</div>
 
----
 
-# Parte B — Desarrollo Experimental
 
----
+## Parte B — Desarrollo Experimental
 
-## B.1 Tabla de Verificación de Alarmas
+### B.1 Tabla de Verificación de Alarmas
 
+<div align="center">
+   
 | Límite Configurado | Valor Simulado | Alarma Activa | Tiempo de Respuesta |
 |---|---|---|---|
 | SpO₂ baja = 90% | 85% | Sí | 5 s |
 | SpO₂ alta = 97% | 99% | Sí | 5 s |
 | FC alta = 120 bpm | 140 bpm | Sí | 4 s |
 
----
+</div>
 
-## B.2 Simulación de Bradicardia
 
-### Configuración
-- FC simulada: 40 bpm
-- SpO₂ simulada: 95%
+### B.2 Simulación de Bradicardia
 
-### Valores medidos en uMEC100
+Se simula el FC en 40 bpm y el SpO₂ en 95% como se muestra en la imagen a continuación:
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d7abe0a5-a31c-42cd-bb0e-b10ee008ca1d"  width="500">
+</p>
+
+Los valores que se obtuvieron en uMEC100 se registraron en la siguiente tabla.
+
+<div align="center">
+   
 | Parámetro | Simulado | Medido | Error Absoluto | Error % |
 |---|---|---|---|---|
-| FC | 40 bpm | 41 bpm | 1 bpm | 2.5% |
-| SpO₂ | 95% | 95% | 0 | 0% |
+| FC | 40 bpm | 40 bpm | 0 bpm | 0% |
+| SpO₂ | 95% | 96% | 1 | 1.05% |
 
-### Observaciones
+</div>
 
-La señal fotopletismográfica presentó una onda estable y periódica correspondiente a una frecuencia cardíaca baja.
+El análisis de la tabla muestra que el monitor presentó una medición precisa para la frecuencia cardíaca (FC), ya que el valor medido coincidió exactamente con el valor simulado por el equipo de prueba, obteniéndose un error absoluto de 0 bpm y un error relativo del 0 %. En el caso de la saturación de oxígeno (SpO₂), se observó una diferencia mínima de 1 % entre el valor simulado y el medido, correspondiente a un error porcentual de 1.05 %, el cual se encuentra dentro de los límites de tolerancia aceptados para equipos de monitoreo clínico. En general, los resultados indican un funcionamiento adecuado del monitor de signos vitales y una correcta respuesta frente a las señales generadas por el simulador.
+
+Tambien se establecio el limite de la alarma de SpO₂ inferior al 90%, como se observa en la siguiente imagen.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c073ee00-287a-4834-99b0-502fc1708c4d"  width="500">
+</p>
 
 ---
 
-## B.3 Simulación de Hipoxia
+### B.3 Simulación de Hipoxia
 
-### Configuración
-- FC simulada: 80 bpm
-- SpO₂ simulada: 85%
+Se simula el FC en 80 bpm y el SpO₂ en 85% como se muestra en la imagen a continuación:
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6ae8a504-d1b8-479e-8ee7-ee94f683bc3b"  width="500">
+</p>
+
+<div align="center">
+   
 | Parámetro | Simulado | Medido | Error Absoluto | Error % |
 |---|---|---|---|---|
-| FC | 80 bpm | 81 bpm | 1 bpm | 1.25% |
-| SpO₂ | 85% | 86% | 1% | 1.17% |
+| FC | 80 bpm | 80 bpm | 0 bpm | 0% |
+| SpO₂ | 85% | 85% | 0% | 0% |
 
-### Resultado
+</div>
 
-Se activó correctamente la alarma sonora y visual del monitor al superar el límite inferior configurado.
+
+El monitor de signos vitales presentó una respuesta completamente precisa frente a las señales generadas por el simulador. Tanto la frecuencia cardíaca (FC) como la saturación de oxígeno (SpO₂) coincidieron exactamente con los valores simulados, obteniéndose un error absoluto de 0 y un error porcentual del 0 % en ambos parámetros. Esto indica que el sistema de medición del monitor se encuentra funcionando correctamente y dentro de los márgenes clínicos aceptables para monitoreo biomédico.
+
+Ademas se verifco y registro la activación de la alarma sonara/visual en el uMEC100.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6383a68f-b009-4253-b455-8b087d3729e7"  width="500">
+</p>
+
+Durante la prueba se verificó el correcto funcionamiento del sistema de alarmas sonora y visual del Mindray uMEC 100. Al simular una condición fisiológica fuera de los límites establecidos, el equipo activó satisfactoriamente las alertas correspondientes, evidenciando una adecuada detección de eventos críticos y confirmando la capacidad del monitor para advertir oportunamente al personal clínico ante posibles alteraciones en los signos vitales del paciente.
 
 ---
 
-## B.4 Simulación de Alta Saturación y Baja Perfusión
+### B.4 Simulación de Baja Perfusión
 
-### Configuración
-- SpO₂ simulada: 99%
-- Modo: Low Perfusion
+Se simula el FC en 80 bpm y el SpO₂ en 99% como se muestra en la imagen a continuación:
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b8cfb193-c887-4f0d-85a3-c6827f74abb3"  width="500">
+</p>
+
+<div align="center">
+   
 | Parámetro | Simulado | Medido | Error Absoluto | Error % |
 |---|---|---|---|---|
-| SpO₂ | 99% | 98% | 1% | 1.01% |
+| SpO₂ | 99% | 100% | 1% | 1.01% |
 
-### Observaciones
+</div>
 
-La señal fotopletismográfica presentó distorsión y disminución en amplitud debido a la simulación de baja perfusión.
+En la prueba adicional de saturación de oxígeno (SpO₂), el valor simulado fue de 99 % y el monitor registró un valor de 100 %, obteniéndose un error absoluto de 1 % y un error porcentual aproximado de 1.01 %. Este resultado demuestra que el equipo mantiene una alta precisión en la medición de SpO₂, ya que la diferencia observada es mínima y se encuentra dentro de los límites de tolerancia aceptados para equipos de monitoreo clínico. Ademas se verifco y registro la activación de la alarma sonara/visual en el uMEC100.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/18866e2d-d1a4-4e5e-a306-2027bf4e7e35"  width="500">
+</p>
+
+Al generar una señal fisiológica que sobrepasaba los rangos configurados en el monitor, el equipo respondió correctamente activando las alarmas visuales y sonoras programadas para advertir una condición anormal. La señal fotopletismográfica presentó distorsión y disminución en amplitud debido a la simulación de baja perfusión.
 
 ---
 
-## B.5 Simulación de Taquicardia
+### B.5 Simulación de Taquicardia
 
-### Configuración
-- FC simulada: 140 bpm
-- SpO₂ simulada: 95%
+Se simula el FC en 140 bpm y el SpO₂ en 95% como se muestra en la imagen a continuación:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4a0b9257-d5a5-4f26-8384-f4d0f320319c"  width="500">
+</p>
 
+<div align="center">
+   
 | Parámetro | Simulado | Medido | Error Absoluto | Error % |
 |---|---|---|---|---|
-| FC | 140 bpm | 142 bpm | 2 bpm | 1.42% |
-| SpO₂ | 95% | 95% | 0 | 0% |
+| FC | 140 bpm | 140 bpm | 0 bpm | 0% |
+| SpO₂ | 95% | 98% | 3 | 3.16% |
 
-### Resultado
+</div>
 
-La alarma de frecuencia cardíaca elevada se activó correctamente.
+La tabla muestra que la frecuencia cardíaca (FC) presentó una coincidencia exacta entre el valor simulado y el valor medido, obteniéndose un error absoluto de 0 bpm y un error porcentual de 0 %, lo que evidencia una respuesta precisa del monitor para este parámetro. En el caso de la saturación de oxígeno (SpO₂), el valor medido fue de 98 % mientras que el valor simulado fue de 95 %, generando un error absoluto de 3 % y un error porcentual aproximado de 3.16 %. Aunque existe una pequeña variación en la medición de SpO₂, el monitor continúa mostrando un comportamiento aceptable para aplicaciones clínicas y mantiene una adecuada capacidad de detección y monitoreo de los signos vitales simulados.
+Adicionalmente se verifco y registro la activación de la alarma sonara/visual en el uMEC100.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b7009439-fbcc-4e8f-810b-38497f8b169b" width="500">
+</p>
+
+Durante la simulación de una condición de frecuencia cardíaca elevada, el Mindray uMEC 100 activó correctamente la alarma sonora y visual, indicando que el sistema de alertas del monitor funciona adecuadamente ante valores fisiológicos fuera de los límites establecidos. 
 
 ---
-
-# 6. Resultados
 
 Durante la práctica fue posible verificar el correcto funcionamiento del monitor uMEC100 mediante la simulación de diferentes condiciones fisiológicas y patológicas utilizando el simulador Pronk OxSim OX-1.
 
@@ -235,84 +217,92 @@ Asimismo, las alarmas clínicas se activaron dentro de tiempos aceptables y los 
 
 ---
 
-# 7. Análisis de Resultados
+## Análisis de Resultados
 
 ## Análisis 1
 
-Los errores absolutos y porcentuales obtenidos fueron bajos en todas las pruebas realizadas. Esto indica una adecuada precisión del monitor uMEC100 frente a señales simuladas controladas.
+Para evaluar estadísticamente las diferencias entre los valores suministrados por el simulador y los valores medidos por el monitor uMEC 100, se analizaron los errores absolutos y porcentuales obtenidos en las diferentes condiciones simuladas: bradicardia, hipoxia, baja perfusión y taquicardia.
+
+En el caso de la **frecuencia cardíaca (FC)**, los valores medidos por el monitor coincidieron exactamente con los valores simulados en todas las pruebas realizadas. Para bradicardia se obtuvo 40 bpm simulados y 40 bpm medidos; en hipoxia, 80 bpm simulados y 80 bpm medidos; y en taquicardia, 140 bpm simulados y 140 bpm medidos. Por lo tanto, el error absoluto promedio para FC fue de **0 bpm** y el error porcentual promedio fue de **0 %**, lo cual indica una alta precisión del monitor para este parámetro.
+
+En cuanto a la **saturación de oxígeno (SpO₂)**, se observaron pequeñas diferencias entre los valores simulados y los medidos. En bradicardia se presentó un error de **1 %**, en hipoxia el error fue de **0 %**, en baja perfusión fue de **1 %** y en taquicardia fue de **3 %**. El error absoluto promedio para SpO₂ fue de:
+
+<p align="center">
+
+$$
+\frac{1+0+1+3}{4}=1.25\%
+$$
+
+</p>
+
+Mientras que el error porcentual promedio fue:
+
+<p align="center">
+
+$$
+\frac{1.05+0+1.01+3.16}{4}=1.31\%
+$$
+
+</p>
+
+Esto indica que el monitor presentó una buena respuesta en la medición de SpO₂, aunque con una ligera variabilidad en algunas condiciones, especialmente durante la prueba de taquicardia, donde se obtuvo el mayor error porcentual con **3.16 %**.
+
+En general, los resultados muestran que el uMEC 100 tuvo un comportamiento adecuado frente a las señales generadas por el simulador. La frecuencia cardíaca presentó una coincidencia total con el valor de referencia, mientras que la SpO₂ mostró diferencias pequeñas y aceptables para una prueba de verificación funcional. Por lo tanto, se puede concluir que el equipo respondió de forma estable y confiable ante las condiciones fisiológicas simuladas.
 
 ## Análisis 2
 
-La forma de onda fotopletismográfica varió directamente con la frecuencia cardíaca y las condiciones de perfusión simuladas.
+La forma de onda visualizada en el monitor **uMEC 100** corresponde principalmente a la señal pulsátil detectada por el sensor de oximetría. Esta señal representa los cambios en el volumen de sangre arterial que ocurren con cada latido cardíaco. Por esta razón, cada pico de la onda se relaciona directamente con un pulso generado por el corazón.
 
-- En bradicardia, la señal presentó períodos más amplios.
-- En taquicardia, la señal mostró mayor frecuencia.
-- En baja perfusión, la amplitud disminuyó y la onda presentó distorsión.
+La **frecuencia cardíaca (FC)** se obtiene a partir del número de pulsos detectados por minuto. Cuando la frecuencia cardíaca aumenta, los picos de la onda aparecen más cercanos entre sí, ya que hay más latidos en menos tiempo. Por el contrario, cuando la frecuencia cardíaca disminuye, los picos se observan más separados, indicando una menor cantidad de latidos por minuto.
 
-Esto demuestra la relación directa entre la calidad de la señal PPG y el estado hemodinámico simulado.
+La **saturación periférica de oxígeno (SpO₂)** se relaciona con la absorción de luz roja e infrarroja medida por el sensor. El monitor calcula este valor a partir de la señal pulsátil arterial y muestra el porcentaje de hemoglobina oxigenada en la sangre. Una SpO₂ alta indica una adecuada oxigenación, mientras que una SpO₂ baja puede representar hipoxemia o disminución del oxígeno disponible en sangre.
 
----
+En general, una forma de onda estable, periódica y bien definida indica una buena detección del pulso y una medición confiable de la frecuencia cardíaca y la SpO₂. En cambio, una onda irregular, débil o con ruido puede afectar la precisión de los valores mostrados por el monitor, especialmente en condiciones como baja perfusión, movimiento del sensor o mala colocación del dispositivo.
 
-# 8. Preguntas para la Discusión
 
-## Pregunta 1
+
+## Preguntas para la Discusión
+
 ### ¿Cuál es el principio de operación del Pronk OxSim OX-1 para simular una onda pulsátil?
 
-El OxSim OX-1 utiliza emisores ópticos controlados electrónicamente para reproducir variaciones periódicas equivalentes al flujo pulsátil sanguíneo. Estas señales son interpretadas por el sensor SpO₂ como si provinieran de un paciente real.
+El simulador **Pronk OxSim OX-1** funciona mediante un sistema electrónico y óptico capaz de generar señales pulsátiles similares a las producidas por el flujo sanguíneo arterial en un paciente real. El equipo controla la emisión de luz en diferentes longitudes de onda, reproduciendo variaciones periódicas equivalentes a los cambios de absorción óptica que detecta un sensor de pulsioximetría durante cada latido cardíaco.
 
----
+De esta manera, el sensor SpO₂ del monitor interpreta las señales generadas por el simulador como si provinieran de tejido biológico real, permitiendo evaluar parámetros como frecuencia cardíaca y saturación periférica de oxígeno sin necesidad de conectar el monitor a un paciente. Gracias a esto, el OxSim OX-1 puede utilizarse para pruebas funcionales, mantenimiento y verificación de monitores de signos vitales.
 
-## Pregunta 2
+
 ### ¿Por qué la SpO₂ baja puede ser un falso positivo en una situación de mala perfusión?
 
-En condiciones de baja perfusión existe una reducción significativa de flujo sanguíneo periférico, lo que disminuye la calidad de la señal óptica detectada por el sensor. Esto puede generar errores de lectura e interpretaciones incorrectas de saturación baja, aun cuando el paciente no presente hipoxia real.
+En condiciones de baja perfusión periférica, el flujo sanguíneo que llega a las extremidades disminuye considerablemente, lo que provoca que la señal pulsátil detectada por el sensor de oximetría sea más débil y menos estable. Debido a esto, el monitor puede tener dificultades para diferenciar correctamente la señal arterial del ruido o de otras interferencias presentes durante la medición.
 
----
+Como consecuencia, el equipo puede mostrar valores de saturación periférica de oxígeno (SpO₂) artificialmente bajos, aun cuando el paciente mantenga niveles normales de oxigenación. Por esta razón, una SpO₂ baja en situaciones de mala perfusión puede interpretarse como un falso positivo, ya que el error se origina por la calidad deficiente de la señal y no necesariamente por una condición real de hipoxia.
 
-# 9. Conclusiones
 
-- El simulador Pronk OxSim OX-1 permitió recrear exitosamente diferentes condiciones cardiovasculares y hemodinámicas.
-- El monitor uMEC100 presentó un desempeño adecuado frente a las señales simuladas.
-- Las alarmas clínicas funcionaron correctamente ante condiciones críticas configuradas.
-- La señal fotopletismográfica evidenció cambios importantes según el estado fisiológico simulado.
-- Los errores de medición obtenidos estuvieron dentro de márgenes aceptables clínicamente.
+## Conclusiones
 
----
+- El simulador **Pronk OxSim OX-1** permitió reproducir de manera confiable diferentes condiciones fisiológicas y hemodinámicas, como bradicardia, taquicardia, hipoxia y baja perfusión, facilitando la evaluación funcional del monitor de signos vitales en un entorno controlado y seguro.
 
-# 10. Bibliografía
+- El monitor de signos vitales **uMEC 100** presentó un comportamiento adecuado frente a las señales generadas por el simulador, mostrando mediciones precisas de frecuencia cardíaca y saturación periférica de oxígeno en la mayoría de las pruebas realizadas.
 
-1. Instituto de Salud Pública de Chile (ISP). *Guía para la Clasificación de Dispositivos Médicos según Riesgo*. 2021.
+- El sistema de alarmas sonoras y visuales del monitor respondió correctamente cuando los parámetros simulados superaron los límites fisiológicos establecidos, evidenciando un adecuado funcionamiento de los mecanismos de alerta clínica del equipo.
 
-2. INVIMA. *ABC de Dispositivos Médicos - Guía Reguladora*. Bogotá, Colombia.
+- La señal fotopletismográfica observada en el monitor permitió identificar variaciones relacionadas con los diferentes estados fisiológicos simulados, demostrando la relación existente entre la forma de onda, la perfusión periférica y la frecuencia cardíaca del paciente.
 
-3. Medical IT. *Metrología Biomédica - Pronk OxSim*. Disponible en:  
-https://www.medicalitech.com/producto/ox-sim/
+- Los errores absolutos y porcentuales obtenidos durante las pruebas se mantuvieron dentro de rangos clínicamente aceptables, lo que indica que el equipo posee una adecuada capacidad de medición y monitoreo para aplicaciones biomédicas y hospitalarias.
 
-4. Mindray. *Manual de Usuario uMEC100*.
 
-5. Pronk Technologies. *OX-1 OxSim Flex Pulse Oximeter Tester User Manual*.
 
----
+## Bibliografía
+[1] Mindray, uMEC Series Patient Monitor Operator’s Manual. Shenzhen, China: Mindray Bio-Medical Electronics Co., Ltd.
 
-# Evidencias Experimentales
+[2] Mindray, uMEC Series Patient Monitor Service Manual. Shenzhen, China: Mindray Bio-Medical Electronics Co., Ltd.
 
-## Fotografías
+[3] Pronk Technologies, OxSim OX-1 Operation Instructions / Operator’s Manual. Pronk Technologies Inc.
 
-> Inserte aquí fotografías del montaje experimental, conexiones y monitor.
+[4] Pronk Technologies, “OX-1 OxSim Review,” Pronk Technologies. Disponible en línea.
+[5] L. Cromwell, F. J. Weibell y E. A. Pfeiffer, Biomedical Instrumentation and Measurements, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 1980.
 
----
+[6] International Electrotechnical Commission, IEC 60601-2-49: Particular Requirements for the Safety of Multifunction Patient Monitoring Equipment, Geneva, Switzerland, IEC, 2018.
 
-## Registro de Ondas
 
-> Inserte aquí capturas de pantalla de las señales fotopletismográficas observadas.
 
----
 
-<div align="center">
-
-## Fin del Informe
-
-Repositorio elaborado para la asignatura  
-**Instrumentación Biomédica y Biosensores**
-
-</div>
