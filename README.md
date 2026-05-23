@@ -203,9 +203,9 @@ Adicionalmente se verifco y registro la activación de la alarma sonara/visual e
 
 Durante la simulación de una condición de frecuencia cardíaca elevada, el Mindray uMEC 100 activó correctamente la alarma sonora y visual, indicando que el sistema de alertas del monitor funciona adecuadamente ante valores fisiológicos fuera de los límites establecidos. 
 
----
 
-Durante la práctica fue posible verificar el correcto funcionamiento del monitor uMEC100 mediante la simulación de diferentes condiciones fisiológicas y patológicas utilizando el simulador Pronk OxSim OX-1.
+
+En la práctica fue posible verificar el correcto funcionamiento del monitor uMEC100 mediante la simulación de diferentes condiciones fisiológicas y patológicas utilizando el simulador Pronk OxSim OX-1.
 
 El monitor respondió adecuadamente ante:
 - Episodios de bradicardia
@@ -215,7 +215,7 @@ El monitor respondió adecuadamente ante:
 
 Asimismo, las alarmas clínicas se activaron dentro de tiempos aceptables y los errores de medición permanecieron dentro de rangos permitidos clínicamente.
 
----
+
 
 ## Análisis de Resultados
 
