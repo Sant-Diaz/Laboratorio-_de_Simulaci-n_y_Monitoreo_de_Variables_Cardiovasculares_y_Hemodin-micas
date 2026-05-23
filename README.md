@@ -219,7 +219,7 @@ Asimismo, las alarmas clínicas se activaron dentro de tiempos aceptables y los 
 
 ## Análisis de Resultados
 
-## Análisis 1
+### Análisis 1
 
 Para evaluar estadísticamente las diferencias entre los valores suministrados por el simulador y los valores medidos por el monitor uMEC 100, se analizaron los errores absolutos y porcentuales obtenidos en las diferentes condiciones simuladas: bradicardia, hipoxia, baja perfusión y taquicardia.
 
@@ -249,7 +249,7 @@ Esto indica que el monitor presentó una buena respuesta en la medición de SpO�
 
 En general, los resultados muestran que el uMEC 100 tuvo un comportamiento adecuado frente a las señales generadas por el simulador. La frecuencia cardíaca presentó una coincidencia total con el valor de referencia, mientras que la SpO₂ mostró diferencias pequeñas y aceptables para una prueba de verificación funcional. Por lo tanto, se puede concluir que el equipo respondió de forma estable y confiable ante las condiciones fisiológicas simuladas.
 
-## Análisis 2
+### Análisis 2
 
 La forma de onda visualizada en el monitor **uMEC 100** corresponde principalmente a la señal pulsátil detectada por el sensor de oximetría. Esta señal representa los cambios en el volumen de sangre arterial que ocurren con cada latido cardíaco. Por esta razón, cada pico de la onda se relaciona directamente con un pulso generado por el corazón.
 
